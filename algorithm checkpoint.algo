@@ -1,0 +1,32 @@
+ALGORITHM sentence_length
+
+VAR 
+       sentence:STRING
+       sentence_length:INTEGER
+       spaceCount:INTEGER:=0
+       wordCount:INTEGER
+       vowelCount:INTEGER:=0
+
+  BEGIN
+        Read(sentence)
+        sentence_length = sentence.length
+
+FOR i FROM 0 TO sentence.length-1 STEP 1 DO
+IF(sentence[i]=" ") THEN
+   spaceCount = spaceCount+1
+   END_IF
+END_FOR
+
+ wordCount= spaceCount+1
+
+
+
+FOR i FROM 0 TO sentence.length-1 DO
+ if(sentence[i])= "a"or sentence[i]= "e" or sentence[i]="i" or sentence[i]="o" or sentence[i]="u" THEN
+    vowelCount=vowelCount+1
+END_FOR
+    Write(sentence_length)
+    Write(wordCount)
+    Write(vowelCount)
+
+    END

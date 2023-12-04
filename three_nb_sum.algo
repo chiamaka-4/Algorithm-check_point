@@ -1,0 +1,25 @@
+ALGORITHMS add_three_num means the name of the algorithm
+// declaration of variables
+VAR 
+num1,num2,num3: INTEGER
+sum: INTEGER. INTEGERS are numbers without decimal points.
+ A sum in integer is always written with a colon.
+ integer, floats, boolean, strings, characters are all types of
+ strings are combination of characters
+
+
+
+// body
+BEGIN
+
+Read(num1)
+Read(num2)
+Read(num3)
+the solution should appear in this form
+sum:=num1+num2+num3
+
+then to display the answer,
+
+
+write(sum)
+END

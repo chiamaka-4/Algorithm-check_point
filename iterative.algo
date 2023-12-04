@@ -1,0 +1,9 @@
+ALGORITHM iteration
+
+VAR 
+sum: INTEGER:=1
+
+BEGIN
+WHILE(num<8) DO 
+Write("I AM IN A LOOP")
+num=num+1

@@ -1,0 +1,23 @@
+ALGORITHM selective
+VAR 
+num1,num2,num3: INTEGER
+total:INTEGER:=0
+
+
+// body
+BEGIN
+
+Read(num1)
+Read(num2)
+Read(num3)
+total:=num1+num2+num3
+IF (sum>10) THEN
+ write("the sum is greater than 10") 
+ ELSE_IF  
+ELSE_IF ("sum<10") THEN
+ write("sum is less than 10")
+ ELSE_IF
+ELSE
+write  ("sum is = 10"  )
+
+END

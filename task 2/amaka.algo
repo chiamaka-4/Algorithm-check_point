@@ -1,0 +1,75 @@
+ALGORITHM display_name
+
+VAR 
+// give it any var name with type of var
+person_name:STRING
+
+BEGIN
+Read(person_name)
+write(person_name)
+ END
+
+
+
+ ALGORITHM display_numbers
+
+ VAR 
+ num1,num2,num3:INTEGER
+
+ BEGIN
+ Read(num1)
+ Read(num2)
+ Read(num3)
+
+ write(num1,num2,num3)
+
+ END
+
+ ALGORITHM rectangle_area
+
+ VAR 
+ len,wdh:INTEGER
+
+ BEGIN
+ Read(len)
+ Read(wdh)
+ area=len * wdh
+ write(area)
+
+ END
+
+
+ ALGORITHM tariff_calculator
+
+ VAR 
+//  ri,r2,r3,p-d, ins,vat:INTEGER these are constant in the company
+//  num_of_kms, num_of_days:INTEGER from user input
+rental_km_cost,rental_day_cost:INTEGER
+
+BEGIN
+Read(num_of_kms)
+Read(num_of_days)
+
+evaluate the cost for rental by kilometer
+IF(num_of_kms<=100)THEN
+rental_km_cost=r1*num_of_kms
+ELSE_IF(num_of_kms>=100 and <1000)THEN
+rental_km_cost=r2*num_of_kms
+ELSE_IF(num_of_kms>1000)THEN'0
+rental_km_cost=r3*num_of_kms
+END_IF
+END
+
+rental_km_cost=rental_km_cost + VAT +ins
+
+// evaluate cost for rental by days
+
+rental_km_cost=p_d * num_of_days 
+rental_day_cost=rental_day_cost+VAT+ins
+
+IF(rental_km_cost<rental_day_cost)THEN
+write
+("rental by kilometer is not suitable for you! Enjoy.")
+ELSE_IF(rental by day is not suitable for you)END_IF
+END
+

@@ -1,0 +1,17 @@
+ALGORITHM print_letters_name
+
+
+VAR
+    name_array: ARRAY_OF_STRINGS
+
+    count:INTEGER
+
+BEGIN
+FOR count FROM 0 TO name_array.length-1 STEP step 1 DO
+    write(name[count])
+END_FOR
+
+FOR count FROM name_array.length-1 TO 0 STEP  -1 1 DO
+    write(name[count])
+END_FOR
+

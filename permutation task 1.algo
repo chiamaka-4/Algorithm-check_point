@@ -1,0 +1,23 @@
+ALGORITHM linear_permutation
+
+VAR
+
+    x,y,z,c: INTEGER
+// c like a placeholder for the first error that happened
+BEGIN
+
+Read(x)
+Read(y)
+Read(z)
+
+// permutation
+c:x
+x:=y
+y:=z
+z:=x
+// after permutation
+write(x)
+write(y)
+write(z)
+
+END
