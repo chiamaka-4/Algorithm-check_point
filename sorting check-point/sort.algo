@@ -1,0 +1,22 @@
+FUNCTION cards_sort(cards: ARRAY_OF INTEGER[len];)
+VAR
+    temp: INTEGER
+    swapped: BOOLEAN:= true
+BEGIN
+    Read(cards)
+    WHILE (swapped) DO
+        swapped = false
+
+        FOR i FROM 0 TO len-1 STEP 1  DO
+            IF (cards[i]> cards[i+1]) THEN
+                temp= cards[i]
+                cards[i]= cards [i+1]
+                cards [i+1] = temp
+                swapped=true
+            END_IF
+        END_FOR
+    END_WHILE
+
+    RETURN cards
+
+END
