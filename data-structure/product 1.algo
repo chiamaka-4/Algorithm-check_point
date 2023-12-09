@@ -1,0 +1,86 @@
+PROCEDURE dot_product(v1: ARRAY_OF INTEGER, v2: ARRAY_OF INTEGER)
+VAR
+    i: INTEGER
+    ps: INTEGER:=0  //dot product variable
+BEGIN
+    IF (v1.length != v2.length) THEN
+        Write("Vectors mush have same dimensionality")
+        RETURN false
+    END_IF
+    FOR i FROM 0 TO v1.length-1  STEP 1  DO
+        ps:= ps + (v1[i] * v2[i])
+    END_FOR
+
+    IF (ps=0) THEN
+        Write("The vectors are orthogonal")
+    ELSE 
+        Write("The vectors are not orthogonal") 
+END
+
+ALGORITHM is_orthogonal_vector
+
+VAR
+    random_matrix : ARRAY_OF Vectors[n];
+    i,j: INTEGER
+    ps: INTEGER
+
+BEGIN
+    Read(random_matrix)
+
+    IF (random_matrix.legth<2) THEN
+        Write("Matrix is invalid")
+        RETURN false
+    END_IF
+
+    FOR i FROM 0 TO random_matrix.length-1 STEP 1  DO
+        FOR j FROM i+1 TO random_matrix.length STEP 1  DO
+            dot_product(random_matrix[i], random_matrix[j])
+        END_FOR
+    END_FOR
+
+END
+
+
+//Modification using function instead of procedure
+
+FUNCTION dot_product_fn(v1: ARRAY_OF INTEGER, v2: ARRAY_OF INTEGER): BOOLEAN
+VAR
+    i: INTEGER
+    ps: INTEGER:=0  //dot product variable
+BEGIN
+    IF (v1.length != v2.length) THEN
+        Write("Vectors mush have same dimensionality")
+        RETURN false
+    END_IF
+    FOR i FROM 0 TO v1.length-1  STEP 1  DO
+        ps:= ps + (v1[i] * v2[i])
+    END_FOR
+
+    RETURN ps
+END
+
+ALGORITHM is_orthogonal_vector_fn
+
+VAR
+    random_matrix : ARRAY_OF Vectors[n];
+    i,j: INTEGER
+    ps: INTEGER
+
+BEGIN
+    Read(random_matrix)
+
+    IF (random_matrix.legth<2) THEN
+        Write("Matrix is invalid")
+        RETURN false
+    END_IF
+
+    FOR i FROM 0 TO random_matrix.length-1 STEP 1  DO
+        FOR j FROM i+1 TO random_matrix.length STEP 1  DO
+            IF(dot_product_fn(random_matrix[i], random_matrix[j])=0) THEN 
+                Write("The vectors are orthogonal")
+            ELSE 
+                Write("The vectors are not orthogonal")
+        END_FOR
+    END_FOR
+
+END
