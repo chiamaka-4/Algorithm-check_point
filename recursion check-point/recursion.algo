@@ -1,0 +1,12 @@
+FUNCTION isPalindrome(word: , start:INTEGER :=0, end: INTEGER:= word.length-1) : return_type
+VAR
+    
+BEGIN
+    IF (start>=end) THEN
+        RETURN true
+    
+    IF (word[start] === word[end]) THEN
+        RETURN isPalindrome(word, start + 1, end -1 )
+    ELSE 
+        RETURN false
+END
